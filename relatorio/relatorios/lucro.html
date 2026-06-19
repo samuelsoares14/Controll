@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Relatório de Lucro | SuperMarket</title>
+
+  <link rel="stylesheet" href="lucro.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar">
+
+    <div class="logo">
+      <h2>SuperMarket</h2>
+    </div>
+
+    <nav class="menu">
+
+      <a href="/inicio/dashboard.html">🏠 Início</a>
+
+      <a href="/caixa/frenteCaixa.html">💳 Frente de Caixa</a>
+
+      <a href="/produtos/produtos.html">🛒 Produtos</a>
+
+      <a href="/estoque/estoque.html">📦 Estoque</a>
+
+      <a href="/vendas/vendas.html">💰 Vendas</a>
+
+      <a href="/cliente/clientes.html">👥 Clientes</a>
+
+      <a href="../relatorios.html" class="active">📊 Relatórios</a>
+      
+      <a href="/configuracoes/configuracoes.html">⚙️ Configurações</a>
+
+    </nav>
+
+  </aside>
+
+  <!-- MAIN -->
+
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+      <div>
+
+        <h1>💰 Relatório de Lucro</h1>
+
+        <p>
+          Controle financeiro e análise de lucro do supermercado.
+        </p>
+
+      </div>
+
+      <button class="export-btn">
+
+        ⬇️ Exportar PDF
+
+      </button>
+
+    </header>
+
+    <!-- FILTROS -->
+
+    <section class="filters">
+
+      <select>
+
+        <option>Hoje</option>
+
+        <option>Últimos 7 dias</option>
+
+        <option>Últimos 30 dias</option>
+
+        <option>Último ano</option>
+
+      </select>
+
+      <select>
+
+        <option>Todas categorias</option>
+
+        <option>Alimentos</option>
+
+        <option>Bebidas</option>
+
+        <option>Limpeza</option>
+
+      </select>
+
+      <button>
+
+        Aplicar Filtro
+
+      </button>
+
+    </section>
+
+    <!-- CARDS -->
+
+    <section class="cards">
+
+      <div class="card green">
+
+        <h3>Lucro Total</h3>
+
+        <p>R$ 42.580</p>
+
+      </div>
+
+      <div class="card blue">
+
+        <h3>Faturamento</h3>
+
+        <p>R$ 98.450</p>
+
+      </div>
+
+      <div class="card red">
+
+        <h3>Despesas</h3>
+
+        <p>R$ 55.870</p>
+
+      </div>
+
+      <div class="card orange">
+
+        <h3>Margem</h3>
+
+        <p>43%</p>
+
+      </div>
+
+    </section>
+
+    <!-- RESUMO -->
+
+    <section class="summary-section">
+
+      <div class="summary-box">
+
+        <h2>📊 Resumo Financeiro</h2>
+
+        <div class="summary-grid">
+
+          <div class="summary-item">
+
+            <span>Maior Lucro</span>
+
+            <strong>R$ 8.450</strong>
+
+          </div>
+
+          <div class="summary-item">
+
+            <span>Menor Lucro</span>
+
+            <strong>R$ 540</strong>
+
+          </div>
+
+          <div class="summary-item">
+
+            <span>Média Mensal</span>
+
+            <strong>R$ 12.900</strong>
+
+          </div>
+
+          <div class="summary-item">
+
+            <span>Crescimento</span>
+
+            <strong>+18%</strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- GRÁFICO -->
+
+    <section class="chart-section">
+
+      <div class="chart-box">
+
+        <h2>📈 Evolução do Lucro</h2>
+
+        <div class="fake-chart">
+
+          <div class="chart-item">
+
+            <div class="bar green-bar"></div>
+
+            <span>Jan</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar blue-bar"></div>
+
+            <span>Fev</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar orange-bar"></div>
+
+            <span>Mar</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar red-bar"></div>
+
+            <span>Abr</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- TABELA -->
+
+    <section class="table-section">
+
+      <div class="table-header">
+
+        <h2>Detalhes Financeiros</h2>
+
+        <input
+          type="text"
+          placeholder="Buscar relatório..."
+        >
+
+      </div>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>Mês</th>
+
+            <th>Faturamento</th>
+
+            <th>Despesas</th>
+
+            <th>Lucro</th>
+
+            <th>Margem</th>
+
+            <th>Status</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>Janeiro</td>
+
+            <td class="money">
+              R$ 22.500
+            </td>
+
+            <td>
+              R$ 13.200
+            </td>
+
+            <td class="profit">
+              R$ 9.300
+            </td>
+
+            <td>
+              41%
+            </td>
+
+            <td>
+
+              <span class="status success">
+                Excelente
+              </span>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>Fevereiro</td>
+
+            <td class="money">
+              R$ 24.100
+            </td>
+
+            <td>
+              R$ 14.850
+            </td>
+
+            <td class="profit">
+              R$ 9.250
+            </td>
+
+            <td>
+              38%
+            </td>
+
+            <td>
+
+              <span class="status warning">
+                Bom
+              </span>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>Março</td>
+
+            <td class="money">
+              R$ 28.450
+            </td>
+
+            <td>
+              R$ 16.300
+            </td>
+
+            <td class="profit">
+              R$ 12.150
+            </td>
+
+            <td>
+              43%
+            </td>
+
+            <td>
+
+              <span class="status success">
+                Excelente
+              </span>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
+

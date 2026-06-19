@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | SuperMarket ERP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- LADO ESQUERDO -->
+        <section class="left-side">
+            <div class="shape1"></div>
+            <div class="shape2"></div>
+            <div class="shape3"></div>
+            <div class="brand">
+                <div class="logo">🛒</div>
+                <h1>SuperMarket ERP</h1>
+                <p>Controle vendas,estoque, clientes e relatórios em um único sistema.</p>
+                <div class="modules">
+                    <div>📦 Estoque</div>
+                    <div>💳 Caixa</div>
+                    <div>👥 Clientes</div>
+                    <div>📊 Relatórios</div>
+                </div>
+            </div>
+        </section>
+        <!-- LOGIN -->
+        <section class="right-side">
+            <div class="login-box">
+                <h2>Bem-vindo 👋</h2>
+                <span>Faça login para acessar o sistema</span>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label>Usuário</label>
+                        <input type="text" placeholder="Digite seu usuário">
+                    </div>
+                    <div class="input-group">
+                        <label>Senha</label>
+                        <div class="password-box">
+                            <input type="password" id="senha"placeholder="Digite sua senha">
+                            <span id="toggleSenha">👁️</span>
+                        </div>
+                    </div>
+                    <div id="mensagemLogin"></div>
+                        <div class="options">
+                            <label><input type="checkbox">Lembrar-me</label>
+                            <a href="#">Esqueci minha senha</a>
+                        </div>
+                    <button id="btnLogin" type="submit">Entrar</button>
+                </form>
+                <div class="footer">SuperMarket ERP<br>Versão 1.0</div>
+            </div>
+        </section>
+    </div>
+<script src="login.js"></script>
+</body>
+</html>

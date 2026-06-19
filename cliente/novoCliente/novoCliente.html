@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Novo Cliente | SuperMarket</title>
+
+  <link rel="stylesheet" href="novoCliente.css">
+  <link rel="stylesheet" href="/cssGeral.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <button id="menuToggle" class="menu-toggle">
+        ☰
+    </button>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="logo">
+      <h2>SuperMarket</h2>
+    </div>
+
+    <nav class="menu">
+      <a href="/inicio/dashboard.html">🏠 Início</a>
+      <a href="/caixa/frenteCaixa.html">💳 Frente de Caixa</a>
+      <a href="/receitasProducao/receitasProducao.html">📋 Receitas / Produção</a>
+      <a href="/produtos/produtos.html">🛒 Produtos</a>
+      <a href="/estoque/estoque.html">📦 Estoque</a>
+      <a href="/vendas/vendas.html">💰 Vendas</a>
+      <a href="/cliente/clientes.html">👥 Clientes</a>
+      <a href="/relatorio/relatorios.html">📊 Relatórios</a>
+      <a href="/configuracoes/configuracoes.html">⚙️ Configurações</a>
+    </nav>
+
+  </aside>
+
+  <main class="container">
+
+    <form class="form-cliente" onsubmit="salvarCliente(event)">
+
+  <h1>Novo Cliente</h1>
+
+  <div class="input-group">
+    <label>Nome Completo</label>
+    <input id="nome" type="text" placeholder="Digite o nome do cliente">
+  </div>
+
+  <div class="input-group">
+    <label>Telefone</label>
+    <input id="telefone" type="text" placeholder="(11) 99999-9999">
+  </div>
+
+  <div class="input-group">
+    <label>E-mail</label>
+    <input id="email" type="email" placeholder="cliente@email.com">
+  </div>
+
+  <div class="input-group">
+    <label>Cidade</label>
+    <input id="cidade" type="text" placeholder="Digite a cidade">
+  </div>
+
+  <div class="input-group">
+    <label>Status</label>
+    <select id="status">
+      <option>Ativo</option>
+      <option>Inativo</option>
+    </select>
+  </div>
+
+  <div class="buttons">
+    <button type="submit" class="btn-save">
+      Salvar Cliente
+    </button>
+
+    <button type="button" class="btn-cancel" onclick="history.back()">
+      Cancelar
+    </button>
+  </div>
+
+</form>
+
+  </main>
+<script src="/utils.js"></script>
+<script src="nvoCliente.js"></script>
+</body>
+</html>
+

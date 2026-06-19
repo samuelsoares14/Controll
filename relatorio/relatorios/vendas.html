@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Relatório de Vendas | SuperMarket</title>
+
+  <link rel="stylesheet" href="vendas.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar">
+
+    <div class="logo">
+      <h2>SuperMarket</h2>
+    </div>
+
+    <nav class="menu">
+
+      <a href="/inicio/dashboard.html">🏠 Início</a>
+
+      <a href="/caixa/frenteCaixa.html">💳 Frente de Caixa</a>
+
+      <a href="/produtos/produtos.html">🛒 Produtos</a>
+
+      <a href="/estoque/estoque.html">📦 Estoque</a>
+
+      <a href="/vendas/vendas.html">💰 Vendas</a>
+
+      <a href="/cliente/clientes.html">👥 Clientes</a>
+
+      <a href="../relatorios.html" class="active">📊 Relatórios</a>
+      
+      <a href="/configuracoes/configuracoes.html">⚙️ Configurações</a>
+
+    </nav>
+
+  </aside>
+
+  <!-- MAIN -->
+
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+      <div>
+
+        <h1>🛒 Relatório de Vendas</h1>
+
+        <p>
+          Acompanhe todas as vendas realizadas no sistema.
+        </p>
+
+      </div>
+
+      <button class="export-btn">
+
+        ⬇️ Exportar PDF
+
+      </button>
+
+    </header>
+
+    <!-- FILTROS -->
+
+    <section class="filters">
+
+      <select>
+
+        <option>Hoje</option>
+
+        <option>Últimos 7 dias</option>
+
+        <option>Últimos 30 dias</option>
+
+        <option>Último ano</option>
+
+      </select>
+
+      <select>
+
+        <option>Todos pagamentos</option>
+
+        <option>PIX</option>
+
+        <option>Cartão</option>
+
+        <option>Dinheiro</option>
+
+      </select>
+
+      <button>
+
+        Aplicar Filtro
+
+      </button>
+
+    </section>
+
+    <!-- CARDS -->
+
+    <section class="cards">
+
+      <div class="card green">
+
+        <h3>Total Vendido</h3>
+
+        <p>R$ 28.450</p>
+
+      </div>
+
+      <div class="card blue">
+
+        <h3>Quantidade de Vendas</h3>
+
+        <p>1.245</p>
+
+      </div>
+
+      <div class="card orange">
+
+        <h3>Ticket Médio</h3>
+
+        <p>R$ 92,50</p>
+
+      </div>
+
+      <div class="card red">
+
+        <h3>Produtos Vendidos</h3>
+
+        <p>3.842</p>
+
+      </div>
+
+    </section>
+
+    <!-- GRÁFICO -->
+
+    <section class="chart-section">
+
+      <div class="chart-box">
+
+        <h2>📈 Vendas por Período</h2>
+
+        <div class="fake-chart">
+
+          <div class="chart-item">
+
+            <div class="bar green-bar"></div>
+
+            <span>Seg</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar blue-bar"></div>
+
+            <span>Ter</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar orange-bar"></div>
+
+            <span>Qua</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar red-bar"></div>
+
+            <span>Qui</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar purple-bar"></div>
+
+            <span>Sex</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- TABELA -->
+
+    <section class="table-section">
+
+      <div class="table-header">
+
+        <h2>Histórico de Vendas</h2>
+
+        <input
+          type="text"
+          placeholder="Buscar venda..."
+        >
+
+      </div>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>ID</th>
+
+            <th>Cliente</th>
+
+            <th>Produtos</th>
+
+            <th>Pagamento</th>
+
+            <th>Total</th>
+
+            <th>Data</th>
+
+            <th>Status</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>#1001</td>
+
+            <td>Maria Silva</td>
+
+            <td>Arroz, Feijão</td>
+
+            <td>PIX</td>
+
+            <td class="money">
+              R$ 89,90
+            </td>
+
+            <td>22/05/2026</td>
+
+            <td>
+
+              <span class="status success">
+                Pago
+              </span>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>#1002</td>
+
+            <td>João Pedro</td>
+
+            <td>Leite, Café</td>
+
+            <td>Cartão</td>
+
+            <td class="money">
+              R$ 45,50
+            </td>
+
+            <td>22/05/2026</td>
+
+            <td>
+
+              <span class="status success">
+                Pago
+              </span>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>#1003</td>
+
+            <td>Ana Souza</td>
+
+            <td>Refrigerante</td>
+
+            <td>Dinheiro</td>
+
+            <td class="money">
+              R$ 15,00
+            </td>
+
+            <td>21/05/2026</td>
+
+            <td>
+
+              <span class="status warning">
+                Pendente
+              </span>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>#1004</td>
+
+            <td>Carlos Lima</td>
+
+            <td>Biscoito, Suco</td>
+
+            <td>PIX</td>
+
+            <td class="money">
+              R$ 32,80
+            </td>
+
+            <td>20/05/2026</td>
+
+            <td>
+
+              <span class="status cancel">
+                Cancelado
+              </span>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
+

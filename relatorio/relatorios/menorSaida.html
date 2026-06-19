@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Relatório de Menor Saída | SuperMarket</title>
+
+  <link rel="stylesheet" href="menorSaida.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar">
+
+    <div class="logo">
+      <h2>SuperMarket</h2>
+    </div>
+
+    <nav class="menu">
+
+      <a href="/inicio/dashboard.html">🏠 Início</a>
+
+      <a href="/caixa/frenteCaixa.html">💳 Frente de Caixa</a>
+
+      <a href="/produtos/produtos.html">🛒 Produtos</a>
+
+      <a href="/estoque/estoque.html">📦 Estoque</a>
+
+      <a href="/vendas/vendas.html">💰 Vendas</a>
+
+      <a href="/cliente/clientes.html">👥 Clientes</a>
+
+      <a href="../relatorios.html" class="active">📊 Relatórios</a>
+      
+      <a href="/configuracoes/configuracoes.html">⚙️ Configurações</a>
+
+    </nav>
+
+  </aside>
+
+  <!-- MAIN -->
+
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+      <div>
+
+        <h1>📉 Relatório de Menor Saída</h1>
+
+        <p>
+          Produtos com baixa ou nenhuma venda no período.
+        </p>
+
+      </div>
+
+      <button class="export-btn">
+
+        ⬇️ Exportar PDF
+
+      </button>
+
+    </header>
+
+    <!-- FILTROS -->
+
+    <section class="filters">
+
+      <select>
+
+        <option>Últimos 7 dias</option>
+
+        <option>Últimos 30 dias</option>
+
+        <option>Últimos 6 meses</option>
+
+      </select>
+
+      <select>
+
+        <option>Todas categorias</option>
+
+        <option>Alimentos</option>
+
+        <option>Bebidas</option>
+
+        <option>Limpeza</option>
+
+      </select>
+
+      <button>
+
+        Aplicar Filtro
+
+      </button>
+
+    </section>
+
+    <!-- CARDS -->
+
+    <section class="cards">
+
+      <div class="card red">
+
+        <h3>Sem Saída</h3>
+
+        <p>12</p>
+
+      </div>
+
+      <div class="card orange">
+
+        <h3>Baixa Venda</h3>
+
+        <p>28</p>
+
+      </div>
+
+      <div class="card blue">
+
+        <h3>Produtos Parados</h3>
+
+        <p>8</p>
+
+      </div>
+
+      <div class="card green">
+
+        <h3>Promoções Criadas</h3>
+
+        <p>5</p>
+
+      </div>
+
+    </section>
+
+    <!-- ALERTAS -->
+
+    <section class="alert-section">
+
+      <div class="alert-box">
+
+        <h2>🚨 Produtos Sem Saída</h2>
+
+        <div class="alert-list">
+
+          <div class="alert-item">
+
+            <span>Refrigerante Zero</span>
+
+            <strong>45 dias sem venda</strong>
+
+          </div>
+
+          <div class="alert-item">
+
+            <span>Biscoito Integral</span>
+
+            <strong>38 dias sem venda</strong>
+
+          </div>
+
+          <div class="alert-item">
+
+            <span>Suco Detox</span>
+
+            <strong>30 dias sem venda</strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- GRÁFICO -->
+
+    <section class="chart-section">
+
+      <div class="chart-box">
+
+        <h2>📊 Produtos com Menor Saída</h2>
+
+        <div class="fake-chart">
+
+          <div class="chart-item">
+
+            <div class="bar red-bar"></div>
+
+            <span>Refri Zero</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar orange-bar"></div>
+
+            <span>Biscoito</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar blue-bar"></div>
+
+            <span>Suco</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar green-bar"></div>
+
+            <span>Cereal</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- TABELA -->
+
+    <section class="table-section">
+
+      <div class="table-header">
+
+        <h2>Produtos com Pouca Venda</h2>
+
+        <input
+          type="text"
+          placeholder="Buscar produto..."
+        >
+
+      </div>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>Produto</th>
+
+            <th>Categoria</th>
+
+            <th>Última Venda</th>
+
+            <th>Estoque</th>
+
+            <th>Dias Sem Venda</th>
+
+            <th>Status</th>
+
+            <th>Ação</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>Refrigerante Zero</td>
+
+            <td>Bebidas</td>
+
+            <td>05/04/2026</td>
+
+            <td>24</td>
+
+            <td class="danger-number">
+              45 dias
+            </td>
+
+            <td>
+
+              <span class="status danger">
+                Sem Saída
+              </span>
+
+            </td>
+
+            <td>
+
+              <button class="action-btn">
+                Promoção
+              </button>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>Biscoito Integral</td>
+
+            <td>Alimentos</td>
+
+            <td>12/04/2026</td>
+
+            <td>18</td>
+
+            <td class="warning-number">
+              38 dias
+            </td>
+
+            <td>
+
+              <span class="status warning">
+                Baixa Venda
+              </span>
+
+            </td>
+
+            <td>
+
+              <button class="action-btn">
+                Promover
+              </button>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>Suco Detox</td>
+
+            <td>Bebidas</td>
+
+            <td>20/04/2026</td>
+
+            <td>12</td>
+
+            <td class="normal-number">
+              30 dias
+            </td>
+
+            <td>
+
+              <span class="status normal">
+                Atenção
+              </span>
+
+            </td>
+
+            <td>
+
+              <button class="action-btn">
+                Desconto
+              </button>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
+

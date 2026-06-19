@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Estoque | SuperMarket</title>
+
+  <link rel="stylesheet" href="estoque.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../cssGeral.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <button id="menuToggle" class="menu-toggle">
+        ☰
+    </button>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="logo">
+      <h2>SuperMarket</h2>
+    </div>
+
+    <nav class="menu">
+
+  <a href="/inicio/dashboard.html">🏠 Início</a>
+
+  <a href="/caixa/frenteCaixa.html">💳 Frente de Caixa</a>
+
+  <a href="/receitasProducao/receitasProducao.html">📋 Receitas / Produção </a>
+
+  <a href="/produtos/produtos.html">🛒 Produtos</a>
+
+  <a href="/estoque/estoque.html">📦 Estoque</a>
+
+  <a href="/vendas/vendas.html">💰 Vendas</a>
+
+  <a href="/cliente/clientes.html">👥 Clientes</a>
+
+  <a href="/relatorio/relatorios.html">📊 Relatórios</a>
+
+  <a href="/configuracoes/configuracoes.html">⚙️ Configurações</a>
+
+</nav>
+
+  </aside>
+
+  <!-- MAIN -->
+
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+      <h1>Controle de Estoque</h1>
+
+      <button class="new-stock">
+          ➕ Movimentar Estoque
+      </button>
+
+    </header>
+
+    <!-- CARDS -->
+
+    <section class="cards">
+
+      <div class="card blue">
+
+        <h3>Total Produtos</h3>
+
+        <p id="totalProdutos">0</p>
+
+      </div>
+
+      <div class="card yellow">
+
+        <h3>Estoque Baixo</h3>
+
+        <p id="estoqueBaixo">0</p>
+
+      </div>
+
+      <div class="card red">
+
+        <h3>Sem Estoque</h3>
+
+        <p id="semEstoque">0</p>
+
+      </div>
+
+      <div class="card green">
+
+        <h3>Valor Estoque</h3>
+
+        <p id="valorEstoque">R$ 0,00</p>
+
+      </div>
+
+    </section>
+
+    <!-- SEARCH -->
+
+    <!-- FILTERS -->
+
+    <section class="search-filters">
+
+    <div class="search-area">
+        <input
+            type="text"
+            id="buscarEstoque"
+            placeholder="🔍 Buscar produto..."
+        >
+    </div>
+
+    <div class="filters">
+
+        <button class="filter-btn active-filter" data-filter="todos">
+            Todos
+        </button>
+
+        <button class="filter-btn" data-filter="baixo">
+            Baixo Estoque
+        </button>
+
+        <button class="filter-btn" data-filter="zerado">
+            Sem Estoque
+        </button>
+
+        <button class="filter-btn" data-filter="bebidas">
+            Bebidas
+        </button>
+
+        <button class="filter-btn" data-filter="alimentos">
+            Alimentos
+        </button>
+
+    </div>
+
+</section>
+
+    <!-- TABLE -->
+
+    <section class="table-section">
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>Produto</th>
+
+            <th>Categoria</th>
+
+            <th>Quantidade</th>
+
+            <th>Preço Custo</th>
+
+            <th>Valor Estoque</th>
+
+            <th>Status</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody id="listaEstoque">
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+  <script src="../utils.js"></script>
+  <script src="estoque.js"></script>
+</body>
+</html>
+

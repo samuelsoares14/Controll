@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Produtos | SuperMarket</title>
+
+  <link rel="stylesheet" href="produtos.css">
+  <link rel="stylesheet" href="mobileProdutos.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../cssGeral.css">
+  <link rel="stylesheet" href="../mobileMenu.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <button id="menuToggle" class="menu-toggle">☰</button>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">
+      <h2>SuperMarket</h2>
+    </div>
+    <nav class="menu">
+  <a href="/inicio/dashboard.html">🏠 Dashboard</a>
+  <a href="/caixa/frenteCaixa.html">💳Caixa</a>
+  <a href="/receitasProducao/receitasProducao.html">📋 Receitas / Produção </a>
+  <a href="/produtos/produtos.html">🛒 Produtos</a>
+  <a href="/estoque/estoque.html">📦 Estoque</a>
+  <a href="/vendas/vendas.html">💰 Vendas</a>
+  <a href="/cliente/clientes.html">👥 Clientes</a>
+  <a href="/relatorio/relatorios.html">📊 Relatórios</a>
+  <a href="/configuracoes/configuracoes.html">⚙️ Configurações</a>
+</nav>
+  </aside>
+  <!-- MAIN -->
+  <main class="main-content">
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <h1>Produtos</h1>
+      <a href="/produtos/novoProduto/novoProduto.html">
+        <button class="new-product">
+          + Novo Produto
+        </button>
+      </a>
+    </header>
+    <!-- SEARCH -->
+    <section class="search-area">
+      <input
+        type="text"
+        id="buscarProduto"
+        placeholder="🔍 Buscar por ID, produto ou pagamento..."
+      >
+    </section>
+    <!-- TABLE -->
+    <section class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Imagem</th>
+            <th>Produto</th>
+            <th>Codigo</th>
+            <th>Categoria</th>
+            <th>Preço</th>
+            <th>Estoque</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="listaProdutos">
+          <tr>
+            <td>1</td>
+            <td>
+              <img
+                src="https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=1200&auto=format&fit=crop"
+                class="product-image"
+              >
+            </td>
+            <td>Arroz 5kg</td>
+            <td>Alimentos</td>
+            <td>R$ 24,90</td>
+            <td>
+              <span class="stock ok">52</span>
+            </td>
+            <td>
+              <button class="edit">✏️</button>
+              <button class="delete">🗑️</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img
+                src="https://images.unsplash.com/photo-1515543904379-3d757afe72e3?q=80&w=1200&auto=format&fit=crop"
+                class="product-image">
+            </td>
+            <td>Feijão</td>
+            <td>Alimentos</td>
+            <td>R$ 8,99</td>
+            <td>
+              <span class="stock warning">8</span>
+            </td>
+            <td>
+              <button class="edit">✏️</button>
+              <button class="delete">🗑️</button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img
+                src="https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=1200&auto=format&fit=crop"
+                class="product-image">
+            </td>
+            <td>Leite Integral</td>
+            <td>Bebidas</td>
+            <td>R$ 5,49</td>
+            <td>
+              <span class="stock danger">2</span>
+            </td>
+            <td>
+              <button class="edit">✏️</button>
+              <button class="delete">🗑️</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="../utils.js"></script>
+  <script src="Produto.js"></script>
+</body>
+</html>
+

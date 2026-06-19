@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Frente de Caixa | SuperMarket</title>
+
+    <link rel="stylesheet" href="frenteCaixa.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../cssGeral.css">
+    <link rel="stylesheet" href="mobileCaixa.css">
+    <link rel="stylesheet" href="../mobileMenu.css">
+
+    <link rel="preconnect"href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+
+</head>
+<body>
+    <button id="menuToggle"class="menu-toggle">☰</button>
+    <!-- SIDEBAR -->
+    <aside class="sidebar"
+        id="sidebar">
+        <div class="logo">
+            <h2>SuperMarket</h2>
+        </div>
+        <nav class="menu">
+            <a href="/inicio/dashboard.html">🏠 Dashboard</a>
+            <a href="#">💳 Caixa</a>
+            <a href="/receitasProducao/receitasProducao.html">📋 Receitas / Produção</a>
+            <a href="/produtos/produtos.html">🛒 Produtos</a>
+            <a href="/estoque/estoque.html">📦 Estoque</a>
+            <a href="/vendas/vendas.html">💰 Vendas</a>
+            <a href="/cliente/clientes.html">👥 Clientes</a>
+            <a href="/relatorio/relatorios.html">📊 Relatórios</a>
+            <a href="/configuracoes/configuracoes.html">⚙️ Configurações</a>
+        </nav>
+    </aside>
+    <!-- MAIN -->
+    <main class="main-content">
+        <!-- TOPO -->
+        <header class="topbar">
+            <h1>Frente de Caixa</h1>
+            <div class="cashier-user">
+                <span>👤 <span id="operadorNome">Samuel</span></span>
+            </div>
+        </header>
+        <!-- BUSCA -->
+        <section class="search-area">
+            <input
+                type="text"
+                id="buscarProduto"
+                placeholder="Código, nome ou 4*produto">
+        </section>
+        <!-- CONTAINER -->
+        <section class="cashier-container">
+            <!-- PRODUTOS -->
+            <div class="products-area">
+                <h2>Produtos</h2>
+                <div
+                    class="product-grid"
+                    id="listaProdutos">
+                </div>
+            </div>
+            <!-- CARRINHO -->
+            <div class="cart-area">
+                <div class="cliente-atual" id="clienteAtual">
+                    <strong>Cliente:</strong> <span id="clienteNome">Não selecionado</span><br>
+                    <small id="clienteCPF"></small>
+                </div>
+                <h2>Carrinho</h2>
+                <div
+                    class="cart-items"
+                    id="carrinhoItens">
+                </div>
+                <div class="cart-total">
+                    <h3>Total</h3>
+                    <h2 id="totalVenda">R$ 0,00</h2>
+                </div>
+                <div class="payment">
+                    <h3>Forma de Pagamento</h3>
+                    <select id="formaPagamento">
+                        <option>PIX</option>
+                        <option>Cartão Crédito</option>
+                        <option>Cartão Débito</option>
+                        <option>Dinheiro</option>
+                    </select>
+                </div>
+                <button
+                    class="finish-sale"
+                    id="btnFinalizarVenda">
+                    ✅ Finalizar Venda
+                </button>
+            </div>
+        </section>
+    </main>
+    <div class="client-modal" id="clientModal">
+        <div class="client-box">
+            <h2>👤 Cliente</h2>
+            <input 
+            type="text" 
+            id="clientSearch" 
+            placeholder="Digite o nome do cliente..."
+            autocomplete="off">
+            <input 
+            type="text" 
+            id="clientCPF" 
+            placeholder="CPF (opcional)">
+            <div class="suggestions" id="suggestions"></div>
+            <button id="confirmClient">Confirmar</button>
+        </div>
+    </div>
+    <script src="../utils.js"></script>
+    <script src="frenteDeCaixa.js"></script>
+</body>
+</html>
+

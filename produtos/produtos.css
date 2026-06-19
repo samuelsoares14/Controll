@@ -1,0 +1,345 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: #f4f7fb;
+  display: flex;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+  width: 250px;
+  height: 100vh;
+  background: #172b4d;
+  padding: 25px;
+  position: fixed;
+  color: white;
+}
+
+.logo{
+  margin-bottom: 40px;
+}
+
+.logo h2{
+  font-size: 28px;
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu a{
+  text-decoration: none;
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.menu a:hover{
+  background: #223d69;
+}
+
+.menu .active{
+  background: #2b4f88;
+}
+
+/* MAIN */
+
+.main-content{
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  padding: 30px;
+}
+
+/* TOPBAR */
+
+.topbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.topbar h1{
+  font-size: 32px;
+  color: #172b4d;
+}
+
+.new-product{
+  border: none;
+  background: #1cc88a;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.new-product:hover{
+  background: #18a572;
+  transform: translateY(-2px);
+}
+
+/* SEARCH */
+
+.search-area{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.search-area input{
+
+    width: 350px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+
+}
+
+.search-area input,
+.search-area select{
+
+    padding:12px 16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#fff;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0,0,0,.08);
+
+    font-size:15px;
+
+}
+
+.search-area select{
+
+    cursor:pointer;
+
+    min-width:180px;
+
+}
+
+/* TABLE */
+
+.table-section{
+    background:#fff;
+    border-radius:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+    max-height:690px; /* altura da tabela */
+    overflow-y:auto;
+    overflow-x:auto;
+
+    position:relative;
+}
+
+/* Scroll apenas da tabela */
+
+.table-section::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+}
+
+.table-section::-webkit-scrollbar-track{
+    background:#f1f5f9;
+    border-radius:20px;
+}
+
+.table-section::-webkit-scrollbar-thumb{
+    background:#cbd5e1;
+    border-radius:20px;
+}
+
+.table-section::-webkit-scrollbar-thumb:hover{
+    background:#94a3b8;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th,
+table td{
+    padding:20px 25px;
+}
+
+thead{
+    background:#f8fafc;
+}
+
+thead th{
+    position:sticky;
+    top:0;
+
+    background:#f8fafc;
+
+    z-index:10;
+
+    text-align:left;
+    color:#172b4d;
+    font-size:14px;
+    font-weight:600;
+
+    border-bottom:2px solid #eef2f7;
+}
+
+td{
+    color:#555;
+    border-bottom:1px solid #eef2f7;
+}
+
+tbody tr{
+    transition:.2s;
+}
+
+tbody tr:hover{
+    background:#f8fafc;
+}
+
+/* =========================
+   SCROLL DA TABELA
+========================= */
+
+.table-section::-webkit-scrollbar{
+    width:4px;
+    height:1px;
+}
+
+.table-section::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+.table-section::-webkit-scrollbar-thumb{
+    background:#cbd5e1;
+    border-radius:30px;
+}
+
+.table-section::-webkit-scrollbar-thumb:hover{
+    background:#94a3b8;}
+
+/* PRODUCT IMAGE */
+
+.product-image{
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* STOCK */
+
+.stock{
+  padding: 8px 12px;
+  border-radius: 30px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.ok{
+  background: #1cc88a;
+}
+
+.warning{
+  background: #f6a623;
+}
+
+.danger{
+  background: #ff5b5b;
+}
+
+/* BUTTONS */
+
+.edit,
+.delete{
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.edit{
+  background: #4f7cff;
+  color: white;
+  margin-right: 8px;
+}
+
+.edit:hover{
+  background: #3d69e0;
+}
+
+.delete{
+  background: #ff5b5b;
+  color: white;
+}
+
+.delete:hover{
+  background: #e04747;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 900px){
+
+  .search-area input{
+    width: 100%;
+  }
+
+}
+
+@media(max-width: 700px){
+
+  body{
+    flex-direction: column;
+  }
+
+  .sidebar{
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .topbar{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  th,
+  td{
+    padding: 12px;
+    font-size: 14px;
+  }
+
+}
