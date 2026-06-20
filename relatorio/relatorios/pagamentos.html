@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Relatório de Pagamentos | SuperMarket</title>
+
+  <link rel="stylesheet" href="pagamentos.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar">
+
+    <div class="logo">
+      <h2>SuperMarket</h2>
+    </div>
+
+    <nav class="menu">
+
+      <a href="/supermarket-main/inicio/dashboard.html">🏠 Dashboard</a>
+        <a href="/supermarket-main/caixa/frenteCaixa.html">💳 Caixa</a>
+        <a href="/supermarket-main/receitasProducao/receitasProducao.html">📋 Receitas / Produção</a>
+        <a href="/supermarket-main/produtos/produtos.html">🛒 Produtos</a>
+        <a href="/supermarket-main/estoque/estoque.html">📦 Estoque</a>
+        <a href="/supermarket-main/vendas/vendas.html">💰 Vendas</a>
+        <a href="/supermarket-main/cliente/clientes.html">👥 Clientes</a>
+        <a href="/supermarket-main/relatorio/relatorios.html">📊 Relatórios</a>
+        <a href="/supermarket-main/configuracoes/configuracoes.html">⚙️ Configurações</a>
+
+    </nav>
+
+  </aside>
+
+  <!-- MAIN -->
+
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+      <div>
+
+        <h1>💳 Relatório de Pagamentos</h1>
+
+        <p>
+          Controle dos pagamentos realizados no supermercado.
+        </p>
+
+      </div>
+
+      <button class="export-btn">
+
+        ⬇️ Exportar PDF
+
+      </button>
+
+    </header>
+
+    <!-- FILTROS -->
+
+    <section class="filters">
+
+      <select>
+
+        <option>Todos pagamentos</option>
+
+        <option>PIX</option>
+
+        <option>Cartão</option>
+
+        <option>Dinheiro</option>
+
+      </select>
+
+      <select>
+
+        <option>Hoje</option>
+
+        <option>Últimos 7 dias</option>
+
+        <option>Últimos 30 dias</option>
+
+      </select>
+
+      <button>
+
+        Aplicar Filtro
+
+      </button>
+
+    </section>
+
+    <!-- CARDS -->
+
+    <section class="cards">
+
+      <div class="card green">
+
+        <h3>Total Recebido</h3>
+
+        <p>R$ 85.420</p>
+
+      </div>
+
+      <div class="card blue">
+
+        <h3>PIX</h3>
+
+        <p>R$ 28.900</p>
+
+      </div>
+
+      <div class="card orange">
+
+        <h3>Cartão</h3>
+
+        <p>R$ 42.500</p>
+
+      </div>
+
+      <div class="card red">
+
+        <h3>Dinheiro</h3>
+
+        <p>R$ 14.020</p>
+
+      </div>
+
+    </section>
+
+    <!-- GRÁFICO -->
+
+    <section class="chart-section">
+
+      <div class="chart-box">
+
+        <h2>📈 Formas de Pagamento</h2>
+
+        <div class="fake-chart">
+
+          <div class="chart-item">
+
+            <div class="bar green-bar"></div>
+
+            <span>PIX</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar blue-bar"></div>
+
+            <span>Cartão</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar orange-bar"></div>
+
+            <span>Dinheiro</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- RESUMO -->
+
+    <section class="summary-section">
+
+      <div class="summary-box">
+
+        <h2>📊 Resumo Financeiro</h2>
+
+        <div class="summary-grid">
+
+          <div class="summary-item">
+
+            <span>Maior Pagamento</span>
+
+            <strong>R$ 2.450</strong>
+
+          </div>
+
+          <div class="summary-item">
+
+            <span>Menor Pagamento</span>
+
+            <strong>R$ 12,90</strong>
+
+          </div>
+
+          <div class="summary-item">
+
+            <span>Total Transações</span>
+
+            <strong>1.258</strong>
+
+          </div>
+
+          <div class="summary-item">
+
+            <span>Média por Venda</span>
+
+            <strong>R$ 67,90</strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- TABELA -->
+
+    <section class="table-section">
+
+      <div class="table-header">
+
+        <h2>Histórico de Pagamentos</h2>
+
+        <input
+          type="text"
+          placeholder="Buscar pagamento..."
+        >
+
+      </div>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>ID</th>
+
+            <th>Cliente</th>
+
+            <th>Forma</th>
+
+            <th>Valor</th>
+
+            <th>Data</th>
+
+            <th>Caixa</th>
+
+            <th>Status</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>#1025</td>
+
+            <td>Maria Silva</td>
+
+            <td>PIX</td>
+
+            <td class="money">
+              R$ 245,90
+            </td>
+
+            <td>22/05/2026</td>
+
+            <td>Caixa 01</td>
+
+            <td>
+
+              <span class="status success">
+                Pago
+              </span>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>#1024</td>
+
+            <td>João Pedro</td>
+
+            <td>Cartão</td>
+
+            <td class="money">
+              R$ 589,40
+            </td>
+
+            <td>22/05/2026</td>
+
+            <td>Caixa 02</td>
+
+            <td>
+
+              <span class="status success">
+                Aprovado
+              </span>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>#1023</td>
+
+            <td>Ana Souza</td>
+
+            <td>Dinheiro</td>
+
+            <td class="money">
+              R$ 78,20
+            </td>
+
+            <td>21/05/2026</td>
+
+            <td>Caixa 03</td>
+
+            <td>
+
+              <span class="status warning">
+                Conferir
+              </span>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
+

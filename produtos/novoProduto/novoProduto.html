@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novo Produto | SuperMarket</title>
+
+  <link rel="stylesheet" href="novoProduto.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../../cssGeral.css">
+  <link rel="stylesheet" href="../../mobileMenu.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- BOTÃO MENU MOBILE -->
+    <button id="menuToggle" class="menu-toggle">☰</button>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">
+      <h2>SuperMarket</h2>
+    </div>
+    <nav class="menu">
+        <a href="/supermarket-main/inicio/dashboard.html">🏠 Dashboard</a>
+        <a href="/supermarket-main/caixa/frenteCaixa.html">💳 Caixa</a>
+        <a href="/supermarket-main/receitasProducao/receitasProducao.html">📋 Receitas / Produção</a>
+        <a href="/supermarket-main/produtos/produtos.html">🛒 Produtos</a>
+        <a href="/supermarket-main/estoque/estoque.html">📦 Estoque</a>
+        <a href="/supermarket-main/vendas/vendas.html">💰 Vendas</a>
+        <a href="/supermarket-main/cliente/clientes.html">👥 Clientes</a>
+        <a href="/supermarket-main/relatorio/relatorios.html">📊 Relatórios</a>
+        <a href="/supermarket-main/configuracoes/configuracoes.html">⚙️ Configurações</a>
+    </nav>
+  </aside>
+  <!-- MAIN -->
+  <main class="main-content">
+    <!-- HEADER -->
+    <div class="page-header">
+      <div>
+        <h1>➕ Novo Produto</h1>
+        <p>Cadastre um novo item no sistema.</p>
+      </div>
+    </div>
+    <!-- FORM -->
+    <form class="product-form" id="formProduto">
+      <!-- INFORMAÇÕES -->
+      <section class="form-card">
+        <h2>📦 Informações Básicas</h2>
+        <div class="form-grid">
+          <div class="input-group">
+            <label>Nome do Produto</label>
+            <input id="nomeProduto" type="text" placeholder="Digite o nome do produto">
+          </div>
+          <div class="input-group">
+            <label>Código de Barras</label>
+            <input id="codigoBarras" type="number" placeholder="000000000000">
+          </div>
+          <!-- CATEGORIA -->
+          <div class="categoria-container">
+            <select id="categoria">
+              <option value="">Selecione</option>
+            </select>
+            <button
+              type="button"
+              id="btnNovaCategoria"
+              class="btn-add-categoria">
+              +
+            </button>
+          </div>
+          <div id="formNovaCategoria"
+            class="form-nova-categoria"
+            style="display:none;">
+            <input
+                type="text"
+                id="novaCategoria"
+                placeholder="Nova categoria">
+            <button
+                type="button"
+                id="btnSalvarCategoria">
+                Salvar
+            </button>
+            <button
+                id="btnExcluirCategoriaSelecionada"
+                title="Excluir categoria">
+                🗑️
+            </button>
+          </div>
+  <!-- 🔥 LISTA AGORA DENTRO DO BLOCO 
+  <ul id="listaCategorias" class="lista-categorias"></ul>-->
+        </div>
+      </div>
+      </section>
+      <!-- VALORES -->
+      <section class="form-card">
+        <h2>💰 Valores</h2>
+        <div class="form-grid">
+          <div class="input-group">
+            <label>Preço de Custo</label>
+            <input id="precoCusto" type="number" placeholder="R$ 0,00">
+          </div>
+          <div class="input-group">
+            <label>Preço de Venda</label>
+            <input id="precoVenda" type="text" readonly>
+          </div>
+          <div class="input-group">
+            <label>Margem de Lucro</label>
+            <input id="margemLucro" type="number" placeholder="0%">
+          </div>
+        </div>
+      </section>
+      <!-- ESTOQUE -->
+      <section class="form-card">
+        <h2>📦 Estoque</h2>
+        <div class="form-grid">
+          <div class="input-group">
+            <label>Quantidade</label>
+            <input id="quantidade" type="number" placeholder="0">
+          </div>
+          <div class="input-group">
+            <label>Unidade</label>
+            <select id="unidadesDeMedida">
+              <option value="">Selecione</option>
+              <option value="UN">UN</option>
+              <option value="KG">KG</option>
+              <option value="L">L</option>
+              <option value="CX">CX</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <!-- VALIDADE -->
+      <section class="form-card">
+        <h2>⏰ Validade e Lote</h2>
+        <div class="radio-group">
+          <label>
+            <input type="radio" id="perecivel" name="perecivel">
+            Perecível
+          </label>
+          <label>
+            <input type="radio" id="naoPerecivel" name="perecivel">
+            Não Perecível
+          </label>
+        </div>
+        <div class="form-grid">
+          <div class="input-group">
+            <label>Data de Validade</label>
+            <input type="date" id="dataValidade">
+          </div>
+        </div>
+      </section>
+      <!-- IMAGEM -->
+      <section class="form-card">
+        <h2>🖼 Imagem do Produto</h2>
+        <div class="upload-box">
+          <input type="file" id="imagemProduto" accept="image/*">
+        </div>
+        <img
+          id="previewImagem"
+          src=""
+          alt="Pré-visualização"
+          style="display:none; max-width:200px; margin-top:15px; border-radius:10px;"
+        >
+      </section>
+      <!-- BOTÕES -->
+      <div class="form-buttons">
+        <button type="button" class="btnSalvar green-btn">
+          💾 Salvar Produto
+        </button>
+        <button type="reset" class="gray-btn">
+          Limpar
+        </button>
+      </div>
+    </form>
+  </main>
+<script src="../../utils.js"></script>
+  <script src="novoProduto.js"></script>
+</body>
+</html>
+

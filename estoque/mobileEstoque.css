@@ -1,0 +1,150 @@
+@media (max-width: 768px){
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.main-content{
+    margin-left:0 !important;
+    width:100% !important;
+    padding:100px 15px 20px !important;
+    height:auto;
+}
+
+/* =========================
+   TOPO
+========================= */
+
+.topbar{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.topbar h1{
+    font-size:28px !important;
+    line-height:1.2;
+}
+
+.new-stock{
+    width:100%;
+    height:50px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+    grid-template-columns:1fr !important;
+    gap:15px;
+}
+
+.card{
+    min-height:auto;
+    padding:18px;
+}
+
+.card p{
+    font-size:24px;
+}
+
+/* =========================
+   BUSCA E FILTROS
+========================= */
+
+.search-filters{
+    flex-direction:column;
+    align-items:stretch;
+    gap:12px;
+}
+
+.search-area{
+    width:100%;
+}
+
+.search-area input{
+    width:100% !important;
+}
+
+.filters{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.filters button{
+    flex:1;
+    min-width:120px;
+}
+
+/* =========================
+   TABELA
+========================= */
+
+.table-section{
+    overflow-x:auto;
+    border-radius:18px;
+    -webkit-overflow-scrolling:touch;
+}
+
+table{
+    min-width:850px;
+}
+
+th,
+td{
+    padding:14px;
+    font-size:14px;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.status{
+    font-size:12px;
+    padding:6px 10px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.add,
+.remove{
+    width:34px;
+    height:34px;
+    font-size:16px;
+}
+
+.edit{
+    padding:8px 12px;
+    font-size:13px;
+}
+
+/* =========================
+   AÇÕES
+========================= */
+
+.acoes{
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+}
+
+/* =========================
+   SCROLL MAIS BONITO
+========================= */
+
+.table-section::-webkit-scrollbar{
+    height:6px;
+}
+
+.table-section::-webkit-scrollbar-thumb{
+    background:#4f7cff;
+    border-radius:999px;
+}
+
+}

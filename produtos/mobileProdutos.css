@@ -1,0 +1,100 @@
+﻿@media (max-width: 768px) {
+body {
+    overflow-x: hidden;
+}
+
+.main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 100px 16px 24px !important;
+}
+
+.topbar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+}
+
+.topbar h1 {
+    font-size: 28px !important;
+}
+
+.new-product {
+    width: 100% !important;
+    padding: 14px !important;
+}
+
+.search-area {
+    margin-bottom: 18px !important;
+}
+
+.search-area input {
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
+.table-section {
+    max-height: none !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+}
+
+.table-section table {
+    width: 100% !important;
+    min-width: 100% !important;
+    border-spacing: 0 !important;
+}
+
+.table-section thead {
+    display: none !important;
+}
+
+.table-section tbody tr {
+    display: block !important;
+    margin-bottom: 18px !important;
+    background: #fff !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 22px rgba(0,0,0,.06) !important;
+    overflow: hidden !important;
+}
+
+.table-section tbody td {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 16px 18px !important;
+    border-bottom: 1px solid #eef2f7 !important;
+    position: relative !important;
+}
+
+.table-section tbody td:last-child {
+    border-bottom: none !important;
+}
+
+.table-section tbody td::before {
+    content: attr(data-label) !important;
+    flex: 0 0 42% !important;
+    color: #52637a !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: .02em !important;
+    text-transform: uppercase !important;
+    padding-right: 10px !important;
+}
+
+.table-section tbody td:nth-of-type(1)::before { content: "ID" !important; }
+.table-section tbody td:nth-of-type(2)::before { content: "Imagem" !important; }
+.table-section tbody td:nth-of-type(3)::before { content: "Produto" !important; }
+.table-section tbody td:nth-of-type(4)::before { content: "Código" !important; }
+.table-section tbody td:nth-of-type(5)::before { content: "Categoria" !important; }
+.table-section tbody td:nth-of-type(6)::before { content: "Preço" !important; }
+.table-section tbody td:nth-of-type(7)::before { content: "Estoque" !important; }
+.table-section tbody td:nth-of-type(8)::before { content: "Ações" !important; }
+
+.product-image {
+    width: 48px !important;
+    height: 48px !important;
+    margin-right: 10px !important;
+    border-radius: 14px !important;
+}
+}

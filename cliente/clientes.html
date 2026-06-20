@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Clientes | SuperMarket</title>
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="clientes.css">
+    <link rel="stylesheet" href="/cssGeral.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <button id="menuToggle" class="menu-toggle">
+        ☰
+    </button>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="logo">
+      <h2>SuperMarket</h2>
+    </div>
+
+    <nav class="menu">
+
+    <a href="/supermarket-main/inicio/dashboard.html">🏠 Dashboard</a>
+        <a href="/supermarket-main/caixa/frenteCaixa.html">💳 Caixa</a>
+        <a href="/supermarket-main/receitasProducao/receitasProducao.html">📋 Receitas / Produção</a>
+        <a href="/supermarket-main/produtos/produtos.html">🛒 Produtos</a>
+        <a href="/supermarket-main/estoque/estoque.html">📦 Estoque</a>
+        <a href="/supermarket-main/vendas/vendas.html">💰 Vendas</a>
+        <a href="/supermarket-main/cliente/clientes.html">👥 Clientes</a>
+        <a href="/supermarket-main/relatorio/relatorios.html">📊 Relatórios</a>
+        <a href="/supermarket-main/configuracoes/configuracoes.html">⚙️ Configurações</a>
+
+    </nav>
+
+  </aside>
+
+  <!-- MAIN -->
+
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+      <h1>Clientes</h1>
+
+      <a href="novoCliente/novoCliente.html">
+        <button class="new-client">
+          + Novo Cliente
+        </button>
+      </a>
+
+    </header>
+
+    <!-- CARDS -->
+
+    <section class="cards">
+
+      <div class="card blue">
+
+        <h3>Total Clientes</h3>
+
+        <p>245</p>
+
+      </div>
+
+      <div class="card green">
+
+        <h3>Clientes Ativos</h3>
+
+        <p>198</p>
+
+      </div>
+
+      <div class="card orange">
+
+        <h3>Novos no Mês</h3>
+
+        <p>32</p>
+
+      </div>
+
+      <div class="card red">
+
+        <h3>Inativos</h3>
+
+        <p>15</p>
+
+      </div>
+
+    </section>
+
+    <!-- SEARCH -->
+
+    <section class="search-area">
+
+      <input
+        type="text"
+        placeholder="Buscar cliente..."
+      >
+
+    </section>
+
+    <!-- TABLE -->
+
+    <section class="table-section">
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>ID</th>
+
+            <th>Cliente</th>
+
+            <th>Telefone</th>
+
+            <th>Email</th>
+
+            <th>Cidade</th>
+
+            <th>Status</th>
+
+            <th>Ações</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>#001</td>
+
+            <td>Maria Silva</td>
+
+            <td>(11) 99999-1111</td>
+
+            <td>maria@email.com</td>
+
+            <td>Jundiaí</td>
+
+            <td>
+              <span class="status active">
+                Ativo
+              </span>
+            </td>
+
+            <td>
+
+              <button class="view">
+                👁️
+              </button>
+
+              <button class="edit">
+                ✏️
+              </button>
+
+              <button class="delete">
+                🗑️
+              </button>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>#002</td>
+
+            <td>João Pedro</td>
+
+            <td>(11) 98888-2222</td>
+
+            <td>joao@email.com</td>
+
+            <td>Campinas</td>
+
+            <td>
+              <span class="status inactive">
+                Inativo
+              </span>
+            </td>
+
+            <td>
+
+              <button class="view">
+                👁️
+              </button>
+
+              <button class="edit">
+                ✏️
+              </button>
+
+              <button class="delete">
+                🗑️
+              </button>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>#003</td>
+
+            <td>Ana Souza</td>
+
+            <td>(11) 97777-3333</td>
+
+            <td>ana@email.com</td>
+
+            <td>São Paulo</td>
+
+            <td>
+              <span class="status active">
+                Ativo
+              </span>
+            </td>
+
+            <td>
+
+              <button class="view">
+                👁️
+              </button>
+
+              <button class="edit">
+                ✏️
+              </button>
+
+              <button class="delete">
+                🗑️
+              </button>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+    <div id="modalCliente" class="modal">
+    <div class="modal-box">
+
+        <div class="modal-header">
+            <h2 id="modalTitulo">Cliente</h2>
+            <button onclick="fecharModalCliente()">✖</button>
+        </div>
+
+        <div class="modal-body" id="modalConteudo">
+            <!-- conteúdo dinâmico -->
+        </div>
+
+    </div>
+</div>
+
+  </main>
+<script src="/utils.js"></script>
+<script src="clientes.js"></script>
+</body>
+</html>
+

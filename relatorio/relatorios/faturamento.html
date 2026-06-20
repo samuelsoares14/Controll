@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Relatório de Faturamento | SuperMarket</title>
+
+  <link rel="stylesheet" href="faturamento.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar">
+
+    <div class="logo">
+      <h2>SuperMarket</h2>
+    </div>
+
+    <nav class="menu">
+
+      <a href="/supermarket-main/inicio/dashboard.html">🏠 Dashboard</a>
+        <a href="/supermarket-main/caixa/frenteCaixa.html">💳 Caixa</a>
+        <a href="/supermarket-main/receitasProducao/receitasProducao.html">📋 Receitas / Produção</a>
+        <a href="/supermarket-main/produtos/produtos.html">🛒 Produtos</a>
+        <a href="/supermarket-main/estoque/estoque.html">📦 Estoque</a>
+        <a href="/supermarket-main/vendas/vendas.html">💰 Vendas</a>
+        <a href="/supermarket-main/cliente/clientes.html">👥 Clientes</a>
+        <a href="/supermarket-main/relatorio/relatorios.html">📊 Relatórios</a>
+        <a href="/supermarket-main/configuracoes/configuracoes.html">⚙️ Configurações</a>
+
+    </nav>
+
+  </aside>
+
+  <!-- MAIN -->
+
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+      <div>
+
+        <h1>💵 Relatório de Faturamento</h1>
+
+        <p>
+          Acompanhe o desempenho financeiro e crescimento do mercado.
+        </p>
+
+      </div>
+
+      <button class="export-btn">
+
+        ⬇️ Exportar PDF
+
+      </button>
+
+    </header>
+
+    <!-- FILTROS -->
+
+    <section class="filters">
+
+      <select>
+
+        <option>Hoje</option>
+
+        <option>Últimos 7 dias</option>
+
+        <option>Últimos 30 dias</option>
+
+        <option>Últimos 6 meses</option>
+
+        <option>Último ano</option>
+
+      </select>
+
+      <select>
+
+        <option>Todas categorias</option>
+
+        <option>Alimentos</option>
+
+        <option>Bebidas</option>
+
+        <option>Limpeza</option>
+
+      </select>
+
+      <button>
+
+        Aplicar Filtro
+
+      </button>
+
+    </section>
+
+    <!-- CARDS -->
+
+    <section class="cards">
+
+      <div class="card green">
+
+        <h3>Faturamento Total</h3>
+
+        <p>R$ 128.450</p>
+
+      </div>
+
+      <div class="card blue">
+
+        <h3>Meta do Mês</h3>
+
+        <p>87%</p>
+
+      </div>
+
+      <div class="card orange">
+
+        <h3>Crescimento</h3>
+
+        <p>+18%</p>
+
+      </div>
+
+      <div class="card red">
+
+        <h3>Maior Venda</h3>
+
+        <p>R$ 2.450</p>
+
+      </div>
+
+    </section>
+
+    <!-- GRÁFICO -->
+
+    <section class="chart-section">
+
+      <div class="chart-box">
+
+        <h2>📈 Evolução do Faturamento</h2>
+
+        <div class="fake-chart">
+
+          <div class="chart-item">
+
+            <div class="bar green-bar"></div>
+
+            <span>Jan</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar blue-bar"></div>
+
+            <span>Fev</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar orange-bar"></div>
+
+            <span>Mar</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar red-bar"></div>
+
+            <span>Abr</span>
+
+          </div>
+
+          <div class="chart-item">
+
+            <div class="bar purple-bar"></div>
+
+            <span>Mai</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- RESUMO -->
+
+    <section class="summary-section">
+
+      <div class="summary-box">
+
+        <h2>📊 Resumo Financeiro</h2>
+
+        <div class="summary-grid">
+
+          <div class="summary-item">
+
+            <span>Total em PIX</span>
+
+            <strong>R$ 48.200</strong>
+
+          </div>
+
+          <div class="summary-item">
+
+            <span>Total em Cartão</span>
+
+            <strong>R$ 62.400</strong>
+
+          </div>
+
+          <div class="summary-item">
+
+            <span>Total em Dinheiro</span>
+
+            <strong>R$ 17.850</strong>
+
+          </div>
+
+          <div class="summary-item">
+
+            <span>Lucro Líquido</span>
+
+            <strong>R$ 42.600</strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- TABELA -->
+
+    <section class="table-section">
+
+      <div class="table-header">
+
+        <h2>Histórico de Faturamento</h2>
+
+        <input
+          type="text"
+          placeholder="Buscar registro..."
+        >
+
+      </div>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>Data</th>
+
+            <th>Vendas</th>
+
+            <th>Pedidos</th>
+
+            <th>Clientes</th>
+
+            <th>Faturamento</th>
+
+            <th>Crescimento</th>
+
+            <th>Status</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>22/05/2026</td>
+
+            <td>152</td>
+
+            <td>168</td>
+
+            <td>124</td>
+
+            <td class="money">
+              R$ 12.540
+            </td>
+
+            <td class="growth positive">
+              +12%
+            </td>
+
+            <td>
+
+              <span class="status success">
+                Excelente
+              </span>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>21/05/2026</td>
+
+            <td>131</td>
+
+            <td>140</td>
+
+            <td>110</td>
+
+            <td class="money">
+              R$ 10.880
+            </td>
+
+            <td class="growth positive">
+              +8%
+            </td>
+
+            <td>
+
+              <span class="status success">
+                Bom
+              </span>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>20/05/2026</td>
+
+            <td>98</td>
+
+            <td>102</td>
+
+            <td>89</td>
+
+            <td class="money">
+              R$ 8.240
+            </td>
+
+            <td class="growth negative">
+              -4%
+            </td>
+
+            <td>
+
+              <span class="status warning">
+                Atenção
+              </span>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>19/05/2026</td>
+
+            <td>165</td>
+
+            <td>180</td>
+
+            <td>142</td>
+
+            <td class="money">
+              R$ 14.320
+            </td>
+
+            <td class="growth positive">
+              +15%
+            </td>
+
+            <td>
+
+              <span class="status success">
+                Excelente
+              </span>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
+

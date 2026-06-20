@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="receitasProducao.css">
+    <link rel="stylesheet" href="../cssGeral.css">
+    <link rel="stylesheet" href="../mobileMenu.css">
+
+    <title>Receitas e Produção | SuperMarket</title>
+</head>
+<body>
+    <button id="menuToggle" class="menu-toggle">
+        ☰
+    </button>
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+        <div class="logo">
+            <h2>SuperMarket</h2>
+        </div>
+        <nav class="menu">
+            <a href="/supermarket-main/inicio/dashboard.html">🏠 Dashboard</a>
+        <a href="/supermarket-main/caixa/frenteCaixa.html">💳 Caixa</a>
+        <a href="/supermarket-main/receitasProducao/receitasProducao.html">📋 Receitas / Produção</a>
+        <a href="/supermarket-main/produtos/produtos.html">🛒 Produtos</a>
+        <a href="/supermarket-main/estoque/estoque.html">📦 Estoque</a>
+        <a href="/supermarket-main/vendas/vendas.html">💰 Vendas</a>
+        <a href="/supermarket-main/cliente/clientes.html">👥 Clientes</a>
+        <a href="/supermarket-main/relatorio/relatorios.html">📊 Relatórios</a>
+        <a href="/supermarket-main/configuracoes/configuracoes.html">⚙️ Configurações</a>
+        </nav>
+    </aside>
+    <!-- CONTEÚDO -->
+    <main class="content">
+        <div class="header">
+            <div>
+                <h1>📋 Produção de Receitas</h1>
+            </div>
+            <a href="/supermarket-main/receitasProducao/novaReceita/novaReceita.html">
+                <button class="btn-nova-receita">➕ Nova Receita</button>
+            </a>
+        </div>
+        <!-- BUSCA -->
+        <div class="search-area">
+            <input
+                type="text"
+                id="buscarReceita"
+                placeholder="🔍 Buscar receita..."
+            >
+        </div>
+        <!-- RECEITAS SERÃO INSERIDAS PELO JS -->
+        <div
+            class="receitas-grid"
+            id="receitasGrid">
+        </div>
+    </main>
+    <script src="receitasProducao.js"></script>
+    <script src="../utils.js"></script>
+</body>
+</html>
+
